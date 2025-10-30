@@ -1,0 +1,214 @@
+ DEVOPS INTRODUCTION — DETAILED NOTES
+
+------------------------------------------------------------
+1. WHAT IS DEVOPS?
+------------------------------------------------------------
+DevOps = Development + Operations. It is a culture, philosophy, and set of practices and tools that combine software development (Dev) and IT operations (Ops) to improve software delivery speed, reliability, and quality.
+
+Key idea: Collaboration + Automation + Continuous Feedback.
+
+------------------------------------------------------------
+2. WHY DEVOPS?
+------------------------------------------------------------
+Before DevOps, developers and operations teams worked separately, causing delays and blame-shifting.
+DevOps solves this by combining both functions and automating the entire software development lifecycle (SDLC).
+
+Benefits:
+- Faster releases
+- Better collaboration
+- Reduced errors and downtime
+- Continuous improvement through monitoring and feedback
+
+------------------------------------------------------------
+3. COMPONENTS OF DEVOPS
+------------------------------------------------------------
+a) **Culture & Collaboration** — Teams share responsibility and communicate openly.
+b) **Automation** — Repetitive tasks like testing, deployment, and monitoring are automated.
+c) **Continuous Integration/Delivery (CI/CD)** — Automates building, testing, and deploying code.
+d) **Monitoring & Feedback** — Real-time logs and metrics for continuous improvement.
+
+------------------------------------------------------------
+4. SOFTWARE DEVELOPMENT LIFE CYCLE (SDLC)
+------------------------------------------------------------
+SDLC defines the process of building software in stages.
+
+Phases:
+1. **Planning** — Define goals, gather requirements.
+2. **Requirement Analysis** — Analyze feasibility and business needs.
+3. **Design** — Create architecture and interface design.
+4. **Coding** — Developers write code using programming languages.
+5. **Testing** — QA ensures the product works correctly.
+6. **Release/Deployment** — Deploy to production.
+7. **Maintenance** — Monitor, fix, and update software.
+
+------------------------------------------------------------
+5. WATERFALL METHODOLOGY
+------------------------------------------------------------
+A traditional linear SDLC model — each phase must finish before the next begins.
+Disadvantage: No flexibility to change once a phase is complete.
+
+Modern systems prefer **Agile + DevOps**: smaller, continuous iterations instead of one big waterfall.
+
+------------------------------------------------------------
+6. DEVOPS LIFECYCLE (THE INFINITE LOOP)
+------------------------------------------------------------
+Plan → Code → Build → Test → Release → Deploy → Operate → Monitor → Plan (continuous)
+
+Each phase automates tasks using specialized tools:
+- **Plan:** Jira, Trello
+- **Code:** Git, GitHub
+- **Build:** Maven, Gradle, Docker
+- **Test:** JUnit, Selenium
+- **Release:** Artifactory
+- **Deploy:** Jenkins, Kubernetes
+- **Operate:** Prometheus, Grafana
+- **Monitor:** ELK Stack
+
+------------------------------------------------------------
+7. SHIFT LEFT APPROACH
+------------------------------------------------------------
+"Shift Left" means performing activities (like testing or security) earlier in the development cycle.
+Example: Run security scans and tests immediately after code is written — not at the end.
+Benefits: Bugs and vulnerabilities found earlier = cheaper to fix.
+
+------------------------------------------------------------
+8. SECURITY IN DEVOPS (DEVSECOPS)
+------------------------------------------------------------
+Integrating security from the beginning of development is called **DevSecOps**.
+
+Security testing types:
+- **SCA (Software Composition Analysis):** Finds vulnerabilities in third-party libraries/dependencies.
+- **SAST (Static Application Security Testing):** Scans source code for security flaws before running.
+- **DAST (Dynamic Application Security Testing):** Tests running applications for vulnerabilities.
+
+------------------------------------------------------------
+9. CI/CD PIPELINE (CONTINUOUS INTEGRATION/DEPLOYMENT)
+------------------------------------------------------------
+CI/CD automates the journey from code to deployment.
+
+**Steps:**
+1. Code checkout (from Git)
+2. Install dependencies
+3. Linting (syntax checks)
+4. Compiling/building
+5. Unit testing
+6. Security testing (SCA, SAST)
+7. Dockerization (package into a Docker image)
+8. Artifact creation (store in JFrog Artifactory)
+9. Deployment (automated release to environment)
+
+Tools: Git, Jenkins, GitHub Actions, Docker, JFrog Artifactory.
+
+------------------------------------------------------------
+10. FIREWALLS
+------------------------------------------------------------
+A firewall controls network traffic between systems — allowing or blocking data based on security rules.
+Think of it as a security gate between your system and the outside world.
+
+------------------------------------------------------------
+11. HIGH CONGLOMERATE VALUE (BUSINESS TERM)
+------------------------------------------------------------
+A conglomerate company is a large corporation owning multiple businesses. High conglomerate value = strong diversified portfolio value.
+
+------------------------------------------------------------
+12. MESSAGE BROKER (QUEUE AND PUB/SUB MODELS)
+------------------------------------------------------------
+A message broker manages communication between services asynchronously.
+Examples: RabbitMQ, Kafka, AWS SQS.
+
+- **Queue model:** One producer, one consumer (FIFO order).
+- **Pub/Sub model:** Publisher sends message → multiple subscribers receive copies.
+
+------------------------------------------------------------
+13. SRE (SITE RELIABILITY ENGINEERING)
+------------------------------------------------------------
+A Google-origin practice blending software engineering with operations.
+SRE focuses on:
+- Automation of manual tasks
+- Monitoring uptime and reliability
+- SLAs (Service Level Agreements)
+- Error budgets
+
+------------------------------------------------------------
+14. ZDU (ZERO DOWNTIME UPGRADE)
+------------------------------------------------------------
+Technique to deploy new application versions without interrupting users.
+Usually done via rolling updates or blue-green deployments.
+
+------------------------------------------------------------
+15. SDL (SECURE DEVELOPMENT LIFECYCLE)
+------------------------------------------------------------
+A process of integrating security throughout the development process — includes threat modeling, static analysis, code review, and penetration testing.
+
+------------------------------------------------------------
+16. RFP (REQUEST FOR PROPOSAL)
+------------------------------------------------------------
+A document used by organizations to invite vendors to propose solutions or services for a project.
+
+------------------------------------------------------------
+17. LINTERS AND SONARQUBE
+------------------------------------------------------------
+- **Linters:** Tools that analyze code for syntax and style errors (e.g., ESLint, pylint).
+- **SonarQube:** A platform that checks code quality, security vulnerabilities, and maintains metrics (SAST included).
+
+------------------------------------------------------------
+18. JMETER AND BURP SUITE
+------------------------------------------------------------
+- **JMeter:** Performance testing tool for load and stress testing APIs or web apps.
+- **Burp Suite:** Security testing tool used to detect web vulnerabilities (XSS, SQL injection, etc.).
+
+------------------------------------------------------------
+19. JAVA STATEMENT (BASICS)
+------------------------------------------------------------
+In Java, a statement is a single line of executable code, e.g.:
+int x = 5;
+System.out.println(x);
+Types: Declaration, Assignment, Looping, Conditional.
+
+------------------------------------------------------------
+20. AWS BASICS
+------------------------------------------------------------
+**Amazon Web Services (AWS)** is the most popular cloud provider.
+
+Key Components:
+- **Regions:** Geographic areas (e.g., ap-south-1 = Mumbai).
+- **Availability Zones (AZ):** Isolated datacenters within a region for high availability.
+- **VPC (Virtual Private Cloud):** Private network inside AWS.
+- **Subnets:** Divide VPC into smaller networks —
+  - Public subnet: accessible from the internet.
+  - Private subnet: internal, not directly exposed.
+- **Internet Gateway:** Allows public subnet access to the internet.
+- **EC2 Instances:** Virtual machines that run applications.
+- **Load Balancers:** Distribute traffic evenly to multiple servers.
+- **Authentication & Authorization:** Managed via IAM (Identity and Access Management).
+
+------------------------------------------------------------
+21. MICROSERVICES ARCHITECTURE
+------------------------------------------------------------
+Architecture where a big application is divided into small, independent services that communicate via APIs.
+Each service can use its own tech stack, database, and can scale independently.
+
+------------------------------------------------------------
+22. SYNCHRONOUS VS ASYNCHRONOUS COMMUNICATION
+------------------------------------------------------------
+- **Synchronous:** Request waits for a response (e.g., HTTP call).
+- **Asynchronous:** Request sent → doesn’t wait → processed later (via queue/message broker).
+
+------------------------------------------------------------
+23. API GATEWAY
+------------------------------------------------------------
+Single entry point for all client requests in microservices.
+Handles:
+- Routing
+- Authentication
+- Rate limiting
+- Load balancing
+
+Example: AWS API Gateway, NGINX, Kong.
+
+------------------------------------------------------------
+SUMMARY:
+------------------------------------------------------------
+DevOps is a mindset that merges people, process, and tools to deliver software quickly and securely.
+It relies on CI/CD, automation, collaboration, and feedback to improve speed and reliability.
+
